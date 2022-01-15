@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #eee;
+            width: 500px;
+            text-align: center;
+            margin: 10px auto;
+            padding: 40px;
+            font-size: 20px;
+            border-left: 10px solid violet;
+            position: relative;
+        }
+        
+        p::after {
+            content: "";
+            padding: 0;
+            border-width: 20px;
+            border-style: solid;
+            border-color: transparent violet transparent transparent;
+            position: absolute;
+            left: -50px;
+            bottom: 30px;
+        }
+        p::before {
+            content: attr(data-person);
+            position: absolute;
+            left: -170px;
+            bottom: 12px;
+            background-color: #eee;
+            padding: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+    <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+</body>
+</html>

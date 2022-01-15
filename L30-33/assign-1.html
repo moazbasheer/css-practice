@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .green {
+            top: 20px;
+            left: 35px;
+            background-color: rgb(0,151,136);
+            z-index: 2;
+        }
+        .red {
+            top: 35px;
+            left: 50px;
+            background-color: rgb(244,66,54);
+            z-index: 3;
+        }
+        .blue {
+            top: 5px;
+            left: 20px;
+            background-color: rgb(3,169,245);
+        }
+        .black {
+            top: 20px;
+            left: 20px;
+            background-color: rgb(51,51,51);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="black"></div>
+</body>
+</html>
