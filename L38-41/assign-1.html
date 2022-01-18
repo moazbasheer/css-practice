@@ -5,8 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <style>
+            body {
+                counter-reset: count;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: #eee;
+                border-radius: 50px;
+                margin: 40px;
+                float: left;
+                border: 3px solid black;
+                position: relative;
+                box-shadow: 10px 10px 0 0 blue, -10px -10px 0 0 red;
+            }
+            div::before {
+                counter-increment: count;
+                content: counter(count);
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                color: white;
+                background-color: black;
+                border-radius: 10px;
+                position: absolute;
+                top: -10px;
+                left: 40px;
+            }
+
+            div::after {
+                content: "Element";
+                font-size: small;
+                position: absolute;
+                top: 40px;
+                left: 20px;
+                
+            }
+        </style>
     </head>
     <body>
-        
+        <div></div>
+        <div></div>
+        <div></div>
     </body>
 </html>
