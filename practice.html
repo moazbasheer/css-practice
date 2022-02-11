@@ -2,52 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CSS</title>
+    <title>Practice</title>
     <link rel="stylesheet" href="css/master.css" />
     <style>
-        .parent {
-  overflow: hidden;
-  margin: auto;
-  width: 400px;
-  height: 200px;
-  padding: 10px;
-  background-color: #eee;
-}
-.parent .one,
-.parent .two {
-  float: left;
-  width: 50%;
-  height: 100%;
-}
-.one {
-  background-color: #ddd;
-}
-.two {
-  background-color: #aaa;
-}
-.up {
-  background-color: red;
-  color: white;
-  height: 80px;
-  margin-bottom: 40px;
-}
-.down {
-  background-color: green;
-  color: white;
-  height: 80px;
-  margin-top: 40px;
-}
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .flex {
+      background-color: #eee;
+      width: 600px;
+      padding: 20px;
+      margin: 20px auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .flex div {
+      height: 24%;
+      background-color: #f00;
+      color: white;
+      margin-left: 5px;
+      width: 50px;
+      text-align: center;
+      padding: 20px;
+    }
     </style>
   </head>
   <body>
-    <div class="parent">
-      <div class="one"></div>
-      <div class="two">
-        <div>
-            <div class="up"></div>
-        </div>
-        <div class="down"></div>
-      </div>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
     </div>
   </body>
 </html>
