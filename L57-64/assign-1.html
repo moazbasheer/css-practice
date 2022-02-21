@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign-1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .grid {
+            background-color: #ddd;
+            padding: 20px;
+            width: 800px;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 9fr;
+            row-gap: 3%;
+            column-gap: 3%;
+            
+        }
+
+        .grid div {
+            counter-increment: counter;
+            background-color: rgba(96,125,139,255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid div::before {
+            content: "Element";
+            margin-right: 5px;
+        }
+        
+        .grid div::after {
+            content: counter(counter);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

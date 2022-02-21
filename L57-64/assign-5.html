@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign-5</title>
+    <style>
+       .grid {
+            background-color: #ddd;
+            padding: 20px;
+            width: 800px;
+            height: 400px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 90%;
+            column-gap: 3%;
+            
+        } 
+        .grid div {
+            background-color: rgba(233,30,99,255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+</body>
+</html>
