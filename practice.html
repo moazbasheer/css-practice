@@ -2,46 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Practice</title>
-    <link rel="stylesheet" href="css/master.css" />
+    <title>CSS</title>
     <style>
       * {
         box-sizing: border-box;
+        margin: 0;
       }
-      .parent {
-        border: 10px solid red;
-        margin: 20px auto;
-        width: 800px;
-        height: 500px;
-        background-color: #ddd;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 10px 10px;
-        justify-content: flex-start;
-        padding: 20px;
+      .container {
+        margin: 40px auto;
+        width: 200px;
+        perspective: 600px;
       }
-      .parent div {
-        background-color: red;
-        color: white;
-        padding: 20px;
-        font-size: 30px;
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        transform-origin: right center;
+      }
+      .box:hover {
+        transform: translateX(-100%) rotateY(-180deg);
+      }
+      .box .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-weight: bold;
-        text-align: center;
+        font-size: 30px;
+        color: white;
+        backface-visibility: hidden;
+      }
+      .box .front {
+        background-color: red;
+      }
+      .box .back {
+        background-color: green;
+        transform: rotateY(180deg);
       }
     </style>
   </head>
   <body>
-    <div class="parent">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
+    <div class="container">
+      <div class="box">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+      </div>
     </div>
   </body>
 </html>

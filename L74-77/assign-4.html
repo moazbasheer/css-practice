@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>assign-4</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid, .grid-1 {
+            width: 300px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            margin-left: 20px;
+            position: relative;
+        }
+        .grid .first{
+            grid-column: 1 / 6;
+            grid-row: 1 / 2;
+        }
+        .grid .second, .grid-1 .first {
+            grid-row: 1 / 10;
+            grid-column: 1 / 2;
+        }
+        .grid .third {
+            grid-row: 5 / 6;
+            grid-column: 1 / 6;
+        }
+        .grid .fourth, .grid-1 .second {
+            grid-row: 9 / 10;
+            grid-column: 1 / 6;
+        }
+        .grid div, .grid-1 div {
+            background-color: black;
+        }
+        .grid .square {
+            position: absolute;
+            right: 100px;
+            bottom: 100px;
+            background-color: red;
+        }
+        .grid .square {
+            width: calc(100% / 5 - 10px);
+            height: calc(100% / 9 - 10px);
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .grid-1 .square {
+            width: calc(100% / 5 - 10px);
+            height: calc(100% / 9 - 10px);
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            background-color: red;
+            animation-name: move1;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(0);
+            }
+            30% {
+                transform: translateX(-240px);
+            }
+            40% {
+                transform: translate(-240px, 133px);
+            }
+            50% {
+                transform: translate(0, 133px);
+            }
+            60% {
+                transform: translate(-240px, 133px);
+            }
+            70% {
+                transform: translate(-240px, 266px);
+            }
+            75% {
+                transform: translate(0, 266px);
+            }
+            80% {
+                transform: translate(-240px, 266px);
+            }
+            90% {
+                transform: translate(-240px, 0);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+        @keyframes move1 {
+            0% {
+                transform: translate(0);
+            } 
+            10% {
+                transform: translate(-240px);
+            }
+            20% {
+                transform: translate(-240px, -266px);
+                opacity: 1;
+            }
+            25% {
+                transform: translate(-240px, -266px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-240px, -266px);
+                opacity: 0;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+        
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="fourth"></div>
+        <div class="third"></div>
+        <div class="square"></div>
+    </div>
+    <div class="grid-1">
+        
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="square"></div>
+    </div>
+  </body>
+</html>

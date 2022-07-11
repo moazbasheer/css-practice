@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign-2</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            --color: rgb(0,150,136);
+        }
+        h1 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background-color: var(--color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        h1:before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            left: -45%;
+            width: 25%;
+            height: 100%;
+            background-color: var(--color);
+            transform: skew(15deg);
+        }
+        h1:after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            width: 27%;
+            height: 100%;
+            background-color: var(--color);
+            transform: skew(15deg) translateX(-20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Elzero</h1>
+</body>
+</html>
