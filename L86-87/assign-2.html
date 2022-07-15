@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>assign-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        div {
+        background-color: #dddddd;
+        margin: 40px;
+        width: 500px;
+        padding: 25px;
+        position: relative;
+        }
+        .arrow::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        border-width: 20px;
+        border-style: solid;
+        border-color: #dddddd;
+        }
+        .top::after {
+        top: calc(0% + -20px);
+        border-color: transparent transparent #dddddd transparent;
+        }
+        .right::after {
+        border-color: transparent transparent transparent #dddddd;
+        left: calc(100% + 20px);
+        }
+        .bottom::after {
+        top: calc(100% + 20px);
+        border-color: #dddddd transparent transparent transparent;
+        }
+        .left::after {
+        left: calc(0% + -20px);
+        border-color: transparent #dddddd transparent transparent;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="arrow top">Elzero</div>
+    <div class="arrow right">Elzero</div>
+    <div class="arrow bottom">Elzero</div>
+    <div class="arrow left">Elzero</div>
+  </body>
+</html>
